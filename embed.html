@@ -9,11 +9,23 @@
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css"/>
 </head>
 <body>
-  <video class="js-player" id="media" autoplay="true"><source src="https://drive.google.com/u/3/uc?id=1E3yhI5FyAjTjrL2dt6uuyx-y0AU3eDU6&export=download&confirm=t"></video>
+  <video class="js-player" id="media" autoplay="true">
+    <source src="https://drive.google.com/u/3/uc?id=1E3yhI5FyAjTjrL2dt6uuyx-y0AU3eDU6&export=download&confirm=t">
+  </video>
       <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
       <script src="https://cdn.plyr.io/3.6.12/plyr.polyfilled.js"></script>
       <script>//<![CDATA[
       const players = Array.from(document.querySelectorAll('.js-player')).map(player => new Plyr(player));
       //]]></script>
 </body>
+<style>
+    .plyr {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    body {margin:0;padding:0;border:0;background:#000}
+</style>
 </html>
