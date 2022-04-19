@@ -28,4 +28,9 @@
     }
     body {margin:0;padding:0;border:0;background:#000;overflow:hidden !important}
 </style>
+<script>
+    var URL = window.location.hash;
+    var VIDEO = document.getElementById("media");
+    VIDEO.innerHTML = '<source src="' + URL + '">';
+</script>
 </html>
