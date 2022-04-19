@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player 1.0</title>
+    <title>Player Flex</title>
     <!-- PLYR -->
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css"/>
 </head>
@@ -28,8 +28,11 @@
     body {margin:0;padding:0;border:0;background:#000;overflow:hidden !important}
 </style>
 <script>
-    var URL = window.location.hash;
+    var URLV = window.location.hash;
+    const oldURL = URLV;
+    const URL = oldURL.slice(1);
     var VIDEO = document.getElementById("media");
-    VIDEO.innerHTML = '<source src="' + URL + '">';
+    var decode = atob(URL);
+    VIDEO.innerHTML = '<source src="' + decode + '">';
 </script>
 </html>
