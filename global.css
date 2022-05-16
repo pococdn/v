@@ -239,7 +239,7 @@ body {
   display: none;
   height: 60px;
 }
-.mobile-logo:hover {
+.mobile-logo img {
   width: 180px;
 }
 .desktop-logo {
