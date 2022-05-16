@@ -60,6 +60,7 @@
 }
 .info__slider a {
   color: #fefefe;
+  width: max-content;
   transition: all .3s;
 }
 .info__slider a:hover {
