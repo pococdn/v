@@ -47,7 +47,7 @@
   flex-flow: row nowrap;
   margin: 0;
   padding: 0;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 .feature-content {
   overflow: hidden;
