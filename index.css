@@ -4,10 +4,10 @@
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 660px;
+  max-width: 100%;
   position: relative;
   margin: auto;
-  height: 280px;
+  height: 310px;
   overflow: hidden;
   border-radius: 10px;
 }
