@@ -241,6 +241,8 @@ body {
 }
 .mobile-logo img {
   width: 180px;
+  position: relative;
+  top: 12.5px;
 }
 .desktop-logo {
   display: block;
