@@ -237,6 +237,10 @@ body {
 }
 .mobile-logo {
   display: none;
+  height: 60px;
+}
+.mobile-logo:hover {
+  width: 180px;
 }
 .desktop-logo {
   display: block;
@@ -389,6 +393,12 @@ body {
 }
 /* MOBILE */
 @media (max-width: 768px) {
+  .header__logo {
+    display: none !important;
+  }
+  .slideshow-container {
+    display: none !important;
+  }
   .main__page {
     display: none !important;
   }
