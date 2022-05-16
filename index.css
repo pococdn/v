@@ -1,6 +1,6 @@
 /*<![CDATA[*/
 .mySlides {display: none;height:280px}
-.mySlides img {vertical-align: middle;top:-50%;position:absolute;left:0}
+.mySlides img {vertical-align: middle;top:-50%;position:absolute;left:0;width:100%}
 
 /* Slideshow container */
 .slideshow-container {
