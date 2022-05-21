@@ -403,35 +403,43 @@
     }
 }
 .container-passed {
-    display: flex;
+    display: table;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    list-style-type: none;
+    padding: 0;
 }
 .prev {
-    width: 50%;
     background: #0c0c0c;
     border: 0;
     color: #fff;
-    padding: 12px 0;
+    padding: 8px 0;
     font-size: 16px;
-    margin-top: 10px;
     margin-right: 0;
     border-radius: 5px 0 0 5px;
     text-transform: uppercase;
     cursor: pointer;
+    display: table-cell;
     transition: all .3s;
 }
 .next {
-    width: 50%;
     background: #0c0c0c;
     border: 0;
     color: #fff;
-    padding: 12px 0;
+    padding: 8px 0;
     font-size: 16px;
-    margin-top: 10px;
     margin-left: 0;
     border-radius: 0 5px 5px 0;
     text-transform: uppercase;
     cursor: pointer;
+    display: table-cell;
     transition: all .3s;
+}
+.id_epi {
+    display: table-cell;
+    background: #1f0808;
+    color: #fff;
 }
 .prev:hover, .next:hover {
     background: #3d0000;
@@ -443,4 +451,3 @@
 .fa-angle-right {
     margin-left: 15px;
 }
-  /*]]>*/
