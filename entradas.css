@@ -382,15 +382,24 @@
 }
 .capi-list-tab>li>span {
     color: #fff;
+    transition: all .2s;
 }
 @media (max-width: 766px){
     .container-series{
         height: 320px;
     }
+    .option_tablist{
+        font-size: 0;
+        transition: all .2s;
+    }
 }
 @media (max-width: 380px){
     .container-series{
         height: 210px;
+    }
+    .option_tablist{
+        font-size: 0;
+        transition: all .2s;
     }
 }
 .container-passed {
