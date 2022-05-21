@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Flex</title>
+    <!-- PLYR -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css"/>
+</head>
+<body>
+  <video class="js-player" id="media">
+  </video>
+      <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+      <script src="https://cdn.plyr.io/3.6.12/plyr.polyfilled.js"></script>
+      <script>//<![CDATA[
+      const players = Array.from(document.querySelectorAll('.js-player')).map(player => new Plyr(player));
+      //]]></script>
+</body>
+<style>
+    .plyr {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    body {margin:0;padding:0;border:0;background:#000;overflow:hidden !important}
+</style>
+<script>
+    var URLV = window.location.hash;
+    const oldURL = URLV;
+    const URL = oldURL.slice(1);
+    var VIDEO = document.getElementById("media");
+    var decode = atob(URL);
+    VIDEO.innerHTML = '<source src="https://dl.dropboxusercontent.com/s/'+decode+'.mp4">';
+</script>
+</html>
