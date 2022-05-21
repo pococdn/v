@@ -394,6 +394,9 @@ body {
   transition: all .3s;
 }
 /* MOBILE */
+@media (max-width: 1040px) {
+  .info2_post {flex-direction: column;overflow: hidden;}
+}
 @media (max-width: 768px) {
   .header__logo {
     display: none !important;
@@ -505,7 +508,6 @@ transition: all .3s
 }
 .info_post .img_post {display: none !important}
 .info_post .sinopsis_post {width: 100% !important;display: flex;flex-direction: column;align-items: center;}
-.info2_post {flex-direction: column;overflow: hidden;}
 .main .poster_ttl {padding-left: 20px !important;text-align: center;}
 }
 .tbl_dsc {overflow: auto !important}
