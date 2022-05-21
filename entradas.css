@@ -382,7 +382,7 @@
 }
 .capi-list-tab>li>span {
     color: #fff;
-    transition: all .2s;
+    transition: all .2s linear;
 }
 @media (max-width: 766px){
     .container-series{
@@ -390,7 +390,7 @@
     }
     .option_tablist{
         font-size: 0;
-        transition: all .2s;
+        transition: all .2s linear;
     }
 }
 @media (max-width: 380px){
@@ -399,7 +399,7 @@
     }
     .option_tablist{
         font-size: 0;
-        transition: all .2s;
+        transition: all .2s linear;
     }
 }
 .container-passed {
