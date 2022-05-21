@@ -283,7 +283,7 @@
       max-height: 246px;
       overflow-y: auto;
     }
-    .tbl_dsc table tbody tr td button {
+    .tbl_dsc table tbody tr td a {
       color: #fff;
       border: 0;
       background: transparent;
@@ -295,7 +295,7 @@
       text-transform: uppercase;
       text-decoration: none;
     }
-    .tbl_dsc table tbody tr td button:hover {
+    .tbl_dsc table tbody tr td a:hover {
       background: #A02;
     }
     body ::-webkit-scrollbar {
