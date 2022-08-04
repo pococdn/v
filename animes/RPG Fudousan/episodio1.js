@@ -1,6 +1,6 @@
 var video = []
         video[1] = '<iframe src="https://animegloo.github.io/website/gdrive.html#MW5iUTFsRjM5OEdMUXRZZWZyZnZIV0s2c3hOdHJGZ09P" frameborder=0 scrolling=no width=100% height=100% allowfullscreen></iframe>';
-        video[2] = '<iframe src="https://animegloo.github.io/website/cat.html#OThkeXdz" frameborder=0 scrolling=no width=100% height=100% allowfullscreen></iframe>';
+        video[2] = '<iframe src="https://animegloo.github.io/website/player/?vid=IQTZsowwKrl_Jipez5ORjujSlLhjEYnVMWpgn6XMIt1mb2zq-wYcP7i1TogNl7ou" frameborder=0 scrolling=no width=100% height=100% allowfullscreen></iframe>';
         video[3] = '<iframe src="https://animegloo.github.io/website/box.html#ZmsyY2NlcjQxbXg1NW5jL1JQR0ZfMSBbYW5pbWVnbG9vLmNvbV0=" frameborder=0 scrolling=no width=100% height=100% allowfullscreen></iframe>';
         video[4] = '<iframe src="https://www.fembed.com/v/xpz-na5l732q-1e" frameborder=0 scrolling=no width=100% height=100% allowfullscreen></iframe>';
         video[5] = '<iframe src="https://streamtape.com/e/P6e0x3ZweKh0X4D" frameborder=0 scrolling=no width=100% height=100% allowfullscreen></iframe>';
