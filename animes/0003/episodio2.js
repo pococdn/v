@@ -3,7 +3,7 @@ var video = []
         video[2] = '<iframe src="https://www.fembed.com/v/emy31i-mj3-pg8q" frameborder=0 scrolling=no width=100% height=100% allowfullscreen></iframe>';
         video[3] = '<iframe src="https://mega.nz/embed/5lRUUIgJ#OtKgQQBQp7JUT6LqZCAlr7z6i_jCnUJFByMeqWyE818" frameborder=0 scrolling=no width=100% height=100% allowfullscreen></iframe>';
         video[4] = '<iframe src="https://animegloo.github.io/website/player/solid.html?vid=5GcJzvOG7RWEHgaMZqDC0hGXD3M37fjQ4EHfGG9UdKS_w7qvj3gPedjAGBtwBbhD" frameborder=0 scrolling=no width=100% height=100% allowfullscreen></iframe>';
-        video[5] = '<iframe src="https://animegloo.github.io/website/gdrive.html#1saKZ6NuJO-6u-PZfaQfCkr5dLxZIOsZE" frameborder=0 scrolling=no width=100% height=100% allowfullscreen></iframe>';
+        video[5] = '<iframe src="https://animegloo.github.io/website/gdrive.html#MXNhS1o2TnVKTy02dS1QWmZhUWZDa3I1ZEx4WklPc1pF" frameborder=0 scrolling=no width=100% height=100% allowfullscreen></iframe>';
         video[6] = '<iframe src="https://streamtape.com/e/wDojaKd9o8sx9x" frameborder=0 scrolling=no width=100% height=100% allowfullscreen></iframe>';
         $(document).ready(function(){
           $(".capi-list-tab li:first").addClass("active");
