@@ -821,7 +821,7 @@ transition: all .3s
 .nav-menu-multi-op {
   padding: 2px 8px;
 }
-.li genres {
+.li_genres {
   max-width: 560px;
 }
 .nav-menu-multi-link {
