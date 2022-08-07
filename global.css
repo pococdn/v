@@ -824,6 +824,9 @@ transition: all .3s
 .li_genres {
   max-width: 560px;
 }
+.li_genres li {
+  width: calc(100%/3);
+}
 .nav-menu-multi-link {
   color: var(--text);
   display: block;
