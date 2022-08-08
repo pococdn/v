@@ -239,9 +239,8 @@ body {
   height: 60px;
 }
 .mobile-logo img {
-  width: 180px;
+  height: 100%;
   position: relative;
-  top: 12.5px;
 }
 .desktop-logo {
   display: block;
