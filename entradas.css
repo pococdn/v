@@ -376,7 +376,7 @@
     cursor: pointer;
     transition: all .3s;
 }
-.capi-list-tab>li:hover {
+.capi-list-tab>li:hover, .capi-list-tab>li.active {
     background: #0090ffbb;
     transition: all .3s;
 }
