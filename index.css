@@ -43,7 +43,7 @@
 /* Caption text */
 .content__slider {
   color: #f2f2f2;
-  background: #cc2e36db;
+  background: #0090ffdb;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -94,7 +94,7 @@
     padding: 12px 18px;
     background: #111;
     color: #fefefe;
-    border: 2px solid #ce4950;
+    border: 2px solid #0090ff;
     border-radius: 25px;
     cursor: pointer;
     text-align: center;
@@ -102,7 +102,7 @@
     transition: all .3s;
 }
 .down__slider a:hover {
-    color: #cc2e36;
+    color: #0090ff;
     transition: all .3s;
 }
 /* The dots/bullets/indicators */
@@ -118,7 +118,7 @@
 }
 
 .active, .dot:hover {
-  background-color: #cc2e36bb;
+  background-color: #0090ffbb;
 }
 
 /* Fading animation */
