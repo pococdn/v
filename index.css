@@ -1,5 +1,5 @@
 /*<![CDATA[*/
-.mySlides {display: none;height:280px}
+.mySlides {display: none;height:400px}
 .mySlides img {vertical-align: middle;top:-50%;position:absolute;left:0;width:100%}
 
 /* Slideshow container */
@@ -7,7 +7,7 @@
   max-width: 100%;
   position: relative;
   margin: 0 0 15px 0;
-  height: 310px;
+  height: 400px;
   overflow: hidden;
   border-radius: 10px;
 }
