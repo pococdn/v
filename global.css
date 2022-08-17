@@ -806,8 +806,10 @@ transition: all .3s
   text-overflow: ellipsis;
 }
 .nav-menu-multi {
-  background: var(--hcolor);
-  border-radius: 5px;
+  backdrop-filter: blur(10px);
+  border: 3px solid #0090ff;
+  background-color: rgb(0 0 0 / 45%);
+  border-radius: 5px 20px 5px 20px;
   padding: 0;
   margin: 0;
   position: absolute;
