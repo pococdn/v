@@ -21,7 +21,7 @@
       object-fit: cover;
   }
   .main .poster_ttl {
-      padding-top: 12rem;
+      padding-top: 18rem;
       padding-left: 220px;
       padding-right: 20px;
       background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
@@ -342,7 +342,7 @@
     background-color: #111;
     border-radius: 5px;
     overflow: hidden;
-    height: 470px;
+    height: 520px;
 }
 #video_box {
     position: absolute;
@@ -377,7 +377,7 @@
     transition: all .3s;
 }
 .capi-list-tab>li:hover {
-    background: #3d0000;
+    background: #0090ffbb;
     transition: all .3s;
 }
 .capi-list-tab>li>span {
