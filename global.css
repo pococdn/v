@@ -670,6 +670,9 @@ transition: all .3s
   justify-content: left;
 }
 .main-content .image {
+  background-image: url(https://i.imgur.com/JHZ7kbt.jpeg);
+  background-size: contain;
+  background-position: center center;
   border-radius: 6px;
   overflow: hidden;
   z-index: 1;
