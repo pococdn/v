@@ -1,4 +1,3 @@
-<script>
                 var imgPostGetm = [];
         var numPostDivm = document.getElementsByClassName("imgPostGetm").length;
         for (var i = 0; i < numPostDivm; i++) {
@@ -26,4 +25,3 @@
 	}
     }
 cargadorPostm();
-</script>
