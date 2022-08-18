@@ -1,4 +1,17 @@
 /*<![CDATA[*/
+.añoPost {
+backdrop-filter: blur(10px);
+    border: 1px solid #d2d2d2;
+    background: #a9002250;
+    position: relative;
+    bottom: 3px;
+    margin-left: 15px;
+    padding: 4px 14px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    font-family: sans-serif;
+}
 .imgBlur {
     position: absolute;
     width: 100%;
@@ -41,12 +54,13 @@
       border-radius: 0 0 15px 15px;
       position: relative;
       z-index: 2;
-      width: 100%;
+      width: max-content;
       color: #fff;
       font-weight: 500;
   }
   .main .poster_ttl .ttl {
       width: 100%;
+      display: inline;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
