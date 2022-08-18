@@ -1,4 +1,17 @@
 /*<![CDATA[*/
+.vote_average {
+    z-index: 3;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: #0090ff50;
+    backdrop-filter: blur(10px);
+    color: #f2f2f2;
+    padding: 4px 28px;
+    border-radius: 8px;
+    border: 2px solid #0090ff;
+    font-size: 23px;
+}
 .añoPost {
 backdrop-filter: blur(10px);
     border: 1px solid #d2d2d2;
