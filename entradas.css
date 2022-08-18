@@ -1,4 +1,5 @@
 /*<![CDATA[*/
+.container {max-width: unset !important;margin:0 !important}
 .anuncio {
     display: flex;
     justify-content: center;
