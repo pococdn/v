@@ -1,16 +1,38 @@
 /*<![CDATA[*/
+.vote_total {
+    width: 130px;
+    height: 48px;
+    display: flex;
+    position: absolute;
+    color: #fff;
+    z-index: 3;
+    top: 20px;
+    right: 20px;
+    background: #22222250;
+    backdrop-filter: blur(20px);
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #0090ffcc;
+    border-radius: 0 8px 8px 0;
+}
 .vote_average {
+    display: flex;
     z-index: 3;
     position: absolute;
-    right: 20px;
+    right: 150px;
     top: 20px;
     background: #0090ff50;
     backdrop-filter: blur(10px);
     color: #f2f2f2;
-    padding: 4px 28px;
-    border-radius: 8px;
-    border: 2px solid #0090ff;
+    padding: 0 12px;
+    height: 48px;
+    border-radius: 8px 0 0 8px;
+    border-top: 2px solid #0090ffbb;
+    border-left: 2px solid #0090ffbb;
+    border-bottom: 2px solid #0090ffbb;
     font-size: 23px;
+    align-items: center;
+    justify-content: center;
 }
 .añoPost {
 backdrop-filter: blur(10px);
