@@ -60,13 +60,14 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16), 0 6px 16px rgba(0, 0, 0, 0.05);
   }
   .info_post .sinopsis_post {
-      width: calc(100% - 250px);
-      margin-top: -10rem;
-      z-index: 1;
-      font-weight: 400;
-      opacity: 0.8;
-      color: var(--text);
-      float: left;
+    width: calc(100% - 285px);
+    margin-top: -10rem;
+    margin-right: 20px;
+    z-index: 1;
+    font-weight: 400;
+    opacity: 0.8;
+    color: var(--text);
+    float: left;
   }
   .info_post .sinopsis_post p {
       margin: 0;
