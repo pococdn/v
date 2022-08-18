@@ -5,7 +5,7 @@ var video = []
         video[4] = '<iframe src="https://dood.wf/e/35fgw899u7o2" frameborder=0 scrolling=no width=100% height=100% allowfullscreen></iframe>';
         video[5] = '<iframe src="https://sbspeed.com/e/pihfro62ir87.html" frameborder=0 scrolling=no width=100% height=100% allowfullscreen></iframe>';
         video[6] = '<iframe src="https://streamtape.com/e/9B6JQop3plsazo3" frameborder=0 scrolling=no width=100% height=100% allowfullscreen></iframe>';
-        video[7] = '<iframe src="https://citymovie.github.io/website/download.html?link=https://pasfox.com/ZruWE" frameborder=0 scrolling=no width=100% height=100% allowfullscreen></iframe>';
+        video[7] = '<iframe src="https://citymovie.github.io/website/download.html?link=https://bit.ly/3Pwb5FR" frameborder=0 scrolling=no width=100% height=100% allowfullscreen></iframe>';
         $(document).ready(function(){
           $(".capi-list-tab li:first").addClass("active");
                 $('#video_box').html(video[1]);
