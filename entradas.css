@@ -8,6 +8,8 @@
   }
   .main .image_poster {
       position: relative;
+      width: 100%;
+      height: 400px;
   }
   .main .image_poster img {
       position: absolute;
@@ -16,15 +18,13 @@
       width: 100% !important;
       height: 100%;
       z-index: 1;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16), 0 6px 16px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 8px rgb(0 0 0 / 16%), 0 6px 16px rgb(0 0 0 / 5%);
       object-fit: cover;
   }
   .main .poster_ttl {
-      padding-top: 18rem;
-      padding-left: 220px;
+      padding-top: 11rem;
+      padding-left: 260px;
       padding-right: 20px;
-      background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
       border-radius: 0 0 15px 15px;
       position: relative;
       z-index: 2;
@@ -43,12 +43,12 @@
       margin-bottom: 24px;
   }
   .info_post .img_post {
-      position: relative;
       padding: 0 16px;
-      width: 220px;
+      width: 250px;
       position: relative;
       z-index: 3;
-      margin-top: -8.57143em;
+      margin-top: -22.5rem;
+      margin-left: 1rem;
   }
   .info_post .img_post img {
       background: var(--light);
@@ -58,9 +58,9 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16), 0 6px 16px rgba(0, 0, 0, 0.05);
   }
   .info_post .sinopsis_post {
-      width: calc(100% - 220px);
-      padding: 16px 0;
-      font-size: 20px;
+      width: calc(100% - 250px);
+      margin-top: -10rem;
+      z-index: 1;
       font-weight: 400;
       opacity: 0.8;
       color: var(--text);
@@ -77,7 +77,7 @@
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 3;
-      font-size: 15px;
+      font-size: 18px;
   }
   .showtextbtn {
       background: #303030;
