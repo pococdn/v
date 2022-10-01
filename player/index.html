@@ -32,7 +32,7 @@
     jwplayer.key = "XsWyeNQ1jdztTqhiD5MXEpz37wrnHdV05j7Ocg==";
     var encrpytplay = jwplayer("encrpyt");
     encrpytplay.setup({
-    sources: {file: 'https://pocoanime.herokuapp.com/stream.php?video='+vid, type:'video/mp4'},
+    sources: {file: vid, type:'video/mp4'},
     preload: 'auto',
     primary: 'html5',
     width: $(window).width(),
