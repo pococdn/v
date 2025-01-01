@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M3Player</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.5/dist/plyr.css" />
+    <link href="https://cdn.jsdelivr.net/npm/video.js@7.8.4/dist/video-js.min.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='black'/%3E%3Cpolygon points='26,20 50,32 26,44' fill='white'/%3E%3C/svg%3E">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.5/dist/plyr.polyfilled.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background: #000;
+            font-family: Arial, sans-serif;
+            --plyr-color-main: #e913c3;
+        }
+        #mainContainer {
+            display: flex;
+            height: 100%;
+        }
+        #sidebar {
+            width: 250px;
+            background: #222;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        #sidebar button {
+            width: 100%;
+            border: 0;
+            border-bottom: 0;
+            padding: 10px;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        #logoutButton {
+            background: transparent;
+            border-radius: 10px;
+        }
+        #logoutButton:hover {
+            background: rgba(255, 0, 0, 0.8);
+        }
+        #content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+        }
+        #videoContainer {
+            height: 100%;
+            width: 100%;
+        }
+        .plyr {
+            width: 100%;
+            height: 100%;
+        }
+        input[type="file"], input[type="text"], input[type="password"], textarea {
+            width: 80%;
+            max-width: 400px;
+            margin: 20px 0;
+            padding: 10px;
+            background: #444;
+            border: none;
+            color: #fff;
+        }
+        button {
+            margin-bottom: 10px;
+            padding: 10px 20px;
+            background: #444;
+            border: 0;
+            border-radius: 10px;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #018786;
+        }
+        #uploadButton, #externalUploadButton, #changeCredentialsButton {
+            background: transparent;
+            border-radius: 10px;
+        }
+        #uploadButton:hover, #externalUploadButton:hover, #changeCredentialsButton:hover {
+            background: #333;
+        }
+        #output, #loginOutput {
+            margin-top: 20px;
+            color: #fff;
+        }
+        h1 {
+            color: #fff;
+        }
+        #loginContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #222;
+        }
+        #loginContainer input, #loginContainer button {
+            width: 80%;
+            max-width: 300px;
+        }
+        #errorContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #222;
+            color: #fff;
+        }
+        #proxyStatusButton {
+            position: absolute;
+            bottom: 20px;
+            width: inherit !important;
+            margin: 20px 0;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            width: 100%;
+            cursor: pointer;
+        }
+        .status-verified {
+            background-color: #4CAF50;
+            cursor: not-allowed !important;
+        }
+        .status-not-verified {
+            background-color: #F44336;
+        }
+        .status-verified:hover {
+            background-color: #018786;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Credenciales predefinidas
+        let USERNAME = atob("YWJlbA==");
+        let PASSWORD = atob("a3JhbW9zMDk=");
+
+        // Función para encriptar la URL
+        function encryptUrl(url) {
+            try {
+                const urlParts = url.split('://');
+                const protocol = urlParts[0];
+                const path = urlParts[1];
+                const encryptedPath = CryptoJS.AES.encrypt(
+                    LZString.compressToBase64(path),
+                    "some-key" // Puedes cambiar esta clave si lo deseas
+                ).toString();
+                const dataObject = { p: protocol, d: encryptedPath, t: Date.now() };
+                const encryptedUrl = btoa(JSON.stringify(dataObject))
+                    .replace(/\+/g, '-')
+                    .replace(/\//g, '_')
+                    .replace(/=+$/, '');
+                return encryptedUrl;
+            } catch (error) {
+                return null;
+            }
+        }
+
+        // Función para desencriptar la URL
+        function decryptUrl(encoded) {
+            try {
+                const decoded = atob(encoded.replace(/-/g, '+').replace(/_/g, '/'));
+                const dataObject = JSON.parse(decoded);
+                if (Date.now() - dataObject.t > 24 * 60 * 60 * 1000) {
+                    throw new Error('URL expirada');
+                }
+                const decryptedPath = CryptoJS.AES.decrypt(
+                    dataObject.d,
+                    "some-key" // Debe coincidir con la clave usada en encryptUrl
+                ).toString(CryptoJS.enc.Utf8);
+                const decryptedUrl = dataObject.p + '://' + LZString.decompressFromBase64(decryptedPath);
+                return decryptedUrl;
+            } catch (error) {
+                return null;
+            }
+        }
+
+        function showAlert(message) {
+            alert(message);
+        }
+
+        let player;
+        function setVideoSource(url) {
+            const video = document.getElementById('videoPlayer');
+            video.pause();
+            video.currentTime = 0;
+            if (url.endsWith('.mp4')) {
+                video.src = url;
+                video.play();
+            } else if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(url);
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                    video.play();
+                });
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = url;
+                video.addEventListener('loadedmetadata', () => {
+                    video.play();
+                });
+            }
+        }
+
+        // Función para verificar el proxy
+        async function checkProxy() {
+            try {
+                const proxyUrl = 'https://cors-anywhere.herokuapp.com/https://example.com';
+                await axios.get(proxyUrl);
+                return true;
+            } catch (error) {
+                return false;
+            }
+        }
+
+        // Función para activar el proxy
+        async function activateProxy() {
+            const isProxyActive = await checkProxy();
+            const proxyStatusButton = document.getElementById('proxyStatusButton');
+            if (isProxyActive) {
+                proxyStatusButton.textContent = 'Proxy verificado';
+                proxyStatusButton.classList.remove('status-not-verified');
+                proxyStatusButton.classList.add('status-verified');
+                proxyStatusButton.disabled = true; // Desactivar el botón si el proxy está verificado
+                proxyStatusButton.onclick = null; // Eliminar el evento click
+                return true;
+            } else {
+                proxyStatusButton.textContent = 'Proxy no verificado';
+                proxyStatusButton.classList.remove('status-verified');
+                proxyStatusButton.classList.add('status-not-verified');
+                proxyStatusButton.disabled = false; // Activar el botón si el proxy no está verificado
+                proxyStatusButton.onclick = verifyProxy; // Añadir el evento click
+                return false;
+            }
+        }
+
+        function verifyProxy() {
+            window.open('https://cors-anywhere.herokuapp.com/corsdemo', '_blank');
+        }
+
+        // Función para subir archivos a Catbox
+        async function uploadToCatbox(file) {
+            const formData = new FormData();
+            formData.append('reqtype', 'fileupload');
+            formData.append('userhash', ''); // Si tienes un hash de usuario, puedes agregarlo aquí
+            formData.append('fileToUpload', file, file.name);
+
+            try {
+                const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+                const targetUrl = 'https://catbox.moe/user/api.php';
+                const response = await axios.post(proxyUrl + targetUrl, formData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
+                });
+                if (response.data) {
+                    return response.data;
+                } else {
+                    showAlert("Error al subir el archivo a Catbox");
+                }
+            } catch (error) {
+                showAlert("Error al subir el archivo a Catbox");
+            }
+        }
+
+        async function generateAndUploadM3U8(files) {
+            let m3u8Content = '#EXTM3U\n#EXT-X-VERSION:3\n#EXT-X-TARGETDURATION:10\n#EXT-X-MEDIA-SEQUENCE:0\n';
+            const sortedFiles = Array.from(files).sort((a, b) => {
+                const aIndex = parseInt(a.name.match(/(\d+)\.ts$/)[1]);
+                const bIndex = parseInt(b.name.match(/(\d+)\.ts$/)[1]);
+                return aIndex - bIndex;
+            });
+            for (let i = 0; i < sortedFiles.length; i++) {
+                const file = sortedFiles[i];
+                const catboxLink = await uploadToCatbox(file);
+                m3u8Content += `#EXTINF:10,\n${catboxLink}\n`;
+            }
+            m3u8Content += '#EXT-X-ENDLIST';
+            const m3u8Blob = new Blob([m3u8Content], { type: 'application/vnd.apple.mpegurl' });
+            const m3u8File = new File([m3u8Blob], 'playlist.m3u8', { type: 'application/vnd.apple.mpegurl' });
+            const m3u8Url = await uploadToCatbox(m3u8File);
+            return m3u8Url;
+        }
+
+        function createUploadInterface() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h1>Subir Archivos</h1>
+                <button id="uploadTsButton">Subir carpeta de archivos TS</button>
+                <button id="uploadMp4Button">Subir archivo MP4</button>
+                <div id="output"></div>
+            `;
+            document.getElementById('uploadTsButton').addEventListener('click', createUploadTsInterface);
+            document.getElementById('uploadMp4Button').addEventListener('click', createUploadMp4Interface);
+        }
+
+        function createUploadTsInterface() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h1>Subir Archivos TS y Generar M3U8</h1>
+                <label for="tsFiles">Selecciona carpeta con archivos TS:</label><br>
+                <input type="file" id="tsFiles" webkitdirectory directory multiple><br>
+                <button id="processButton">Generar y Subir M3U8</button>
+                <div id="output"></div>
+            `;
+            document.getElementById('processButton').addEventListener('click', async () => {
+                const tsFiles = document.getElementById('tsFiles').files;
+                if (tsFiles.length === 0) {
+                    showAlert("Por favor selecciona una carpeta con archivos TS.");
+                    return;
+                }
+                const output = document.getElementById('output');
+                output.innerHTML = "Subiendo archivos y generando lista M3U8...";
+                const m3u8Url = await generateAndUploadM3U8(tsFiles);
+                if (m3u8Url) {
+                    const encrypted = encryptUrl(m3u8Url);
+                    const newUrl = `${window.location.pathname}?v=${encrypted}`;
+                    window.location.href = newUrl;
+                } else {
+                    showAlert("Error al generar la lista M3U8.");
+                }
+            });
+        }
+
+        function createUploadMp4Interface() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h1>Subir Archivo MP4</h1>
+                <label for="mp4File">Selecciona el archivo MP4:</label><br>
+                <input type="file" id="mp4File" accept="video/mp4"><br>
+                <button id="uploadMp4Button">Subir MP4</button>
+                <div id="output"></div>
+            `;
+            document.getElementById('uploadMp4Button').addEventListener('click', async () => {
+                const mp4File = document.getElementById('mp4File').files[0];
+                if (!mp4File) {
+                    showAlert("Por favor selecciona un archivo MP4.");
+                    return;
+                }
+                const output = document.getElementById('output');
+                output.innerHTML = "Subiendo archivo MP4...";
+                const mp4Url = await uploadToCatbox(mp4File);
+                if (mp4Url) {
+                    const encrypted = encryptUrl(mp4Url);
+                    const newUrl = `${window.location.pathname}?v=${encrypted}`;
+                    window.location.href = newUrl;
+                } else {
+                    showAlert("Error al subir el archivo MP4.");
+                }
+            });
+        }
+
+        function createExternalUploadInterface() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h1>Subir video desde otro servidor</h1>
+                <label for="tsLinks">Enlaces de archivos TS (uno por línea):</label><br>
+                <textarea id="tsLinks" rows="10"></textarea><br>
+                <button id="generateM3U8Button">Generar y Descargar M3U8</button><br>
+                <label for="m3u8Link">URL de la lista M3U8:</label><br>
+                <input type="text" id="m3u8Link"><br>
+                <button id="encryptButton">Generar Enlace Encriptado</button>
+                <label for="mp4Link">URL del video MP4:</label><br>
+                <input type="text" id="mp4Link"><br>
+                <button id="encryptMp4Button">Generar Enlace MP4 Encriptado</button>
+                <div id="linkOutput"></div>
+            `;
+            document.getElementById('generateM3U8Button').addEventListener('click', () => {
+                const tsLinks = document.getElementById('tsLinks').value.split('\n').filter(link => link.trim() !== '');
+                if (tsLinks.length === 0) {
+                    showAlert("Por favor ingresa enlaces de archivos TS.");
+                    return;
+                }
+                let m3u8Content = '#EXTM3U\n#EXT-X-VERSION:3\n#EXT-X-TARGETDURATION:10\n#EXT-X-MEDIA-SEQUENCE:0\n';
+                tsLinks.forEach(link => {
+                    m3u8Content += `#EXTINF:10,\n${link}\n`;
+                });
+                m3u8Content += '#EXT-X-ENDLIST';
+                const m3u8Blob = new Blob([m3u8Content], { type: 'application/vnd.apple.mpegurl' });
+                const url = URL.createObjectURL(m3u8Blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'playlist.m3u8';
+                a.click();
+            });
+
+            document.getElementById('encryptButton').addEventListener('click', () => {
+                const m3u8Link = document.getElementById('m3u8Link').value.trim();
+                if (!m3u8Link) {
+                    showAlert("Por favor ingresa el enlace de la lista M3U8.");
+                    return;
+                }
+                const encrypted = encryptUrl(m3u8Link);
+                const newUrl = `${window.location.pathname}?v=${encrypted}`;
+                const linkOutput = document.getElementById('linkOutput');
+                linkOutput.innerHTML = `
+                    <p>Enlace encriptado:</p>
+                    <input type="text" value="${newUrl}" readonly><br>
+                    <button id="copyLinkButton">Copiar Enlace</button>
+                    <button id="openLinkButton">Abrir Enlace</button>
+                `;
+                document.getElementById('copyLinkButton').addEventListener('click', () => {
+                    navigator.clipboard.writeText(newUrl);
+                    showAlert("Enlace copiado al portapapeles.");
+                });
+                document.getElementById('openLinkButton').addEventListener('click', () => {
+                    window.open(newUrl, '_blank');
+                });
+            });
+
+            document.getElementById('encryptMp4Button').addEventListener('click', () => {
+                const mp4Link = document.getElementById('mp4Link').value.trim();
+                if (!mp4Link) {
+                    showAlert("Por favor ingresa el enlace del video MP4.");
+                    return;
+                }
+                const encrypted = encryptUrl(mp4Link);
+                const newUrl = `${window.location.pathname}?v=${encrypted}`;
+                const linkOutput = document.getElementById('linkOutput');
+                linkOutput.innerHTML = `
+                    <p>Enlace MP4 encriptado:</p>
+                    <input type="text" value="${newUrl}" readonly><br>
+                    <button id="copyMp4LinkButton">Copiar Enlace</button>
+                    <button id="openMp4LinkButton">Abrir Enlace</button>
+                `;
+                document.getElementById('copyMp4LinkButton').addEventListener('click', () => {
+                    navigator.clipboard.writeText(newUrl);
+                    showAlert("Enlace copiado al portapapeles.");
+                });
+                document.getElementById('openMp4LinkButton').addEventListener('click', () => {
+                    window.open(newUrl, '_blank');
+                });
+            });
+        }
+        function createLoginInterface() {
+            const loginContainer = document.createElement('div');
+            loginContainer.id = 'loginContainer';
+            loginContainer.innerHTML = `
+                <h1>Iniciar Sesión</h1>
+                <input type="text" id="username" placeholder="Usuario"><br>
+                <input type="password" id="password" placeholder="Contraseña"><br>
+                <button id="loginButton">Iniciar Sesión</button>
+                <div id="loginOutput"></div>
+            `;
+            document.body.appendChild(loginContainer);
+
+            document.getElementById('loginButton').addEventListener('click', () => {
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                if (username === USERNAME && password === PASSWORD) {
+                    setSession();
+                    location.reload();
+                } else {
+                    showAlert('Credenciales incorrectas');
+                }
+            });
+        }
+
+        function createVideoInterface() {
+            const videoContainer = document.createElement('div');
+            videoContainer.id = 'videoContainer';
+            videoContainer.innerHTML = `
+                <video id="videoPlayer" controls class="plyr"></video>
+            `;
+            document.body.appendChild(videoContainer);
+            player = new Plyr('#videoPlayer', {
+                controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+                keyboard: { focused: true, global: false },
+                hideControls: true,
+                fullscreen: { enabled: true, fallback: true }
+            });
+        }
+
+        function createChangeCredentialsInterface() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h1>Cambiar Credenciales</h1>
+                <label for="newUsername">Nuevo Usuario:</label><br>
+                <input type="text" id="newUsername" placeholder="Nuevo Usuario"><br>
+                <label for="newPassword">Nueva Contraseña:</label><br>
+                <input type="password" id="newPassword" placeholder="Nueva Contraseña"><br>
+                <button id="applyChangesButton">Aplicar Cambios</button>
+                <div id="credentialsOutput"></div>
+            `;
+            document.getElementById('applyChangesButton').addEventListener('click', () => {
+                const newUsername = document.getElementById('newUsername').value;
+                const newPassword = document.getElementById('newPassword').value;
+                if (newUsername && newPassword) {
+                    const encodedUsername = btoa(newUsername);
+                    const encodedPassword = btoa(newPassword);
+                    document.getElementById('credentialsOutput').innerHTML = `
+                        <p>Credenciales encriptadas:</p>
+                        <p>Usuario: ${encodedUsername}</p>
+                        <p>Contraseña: ${encodedPassword}</p>
+                        <p>Para cambiar las credenciales manualmente en el HTML:</p>
+                        <ul>
+                            <li>Reemplaza la línea <code>let USERNAME = atob("YWJlbA==");</code> por <code>let USERNAME = atob("${encodedUsername}");</code></li>
+                            <li>Reemplaza la línea <code>let PASSWORD = atob("a3JhbW9zMDk=");</code> por <code>let PASSWORD = atob("${encodedPassword}");</code></li>
+                        </ul>
+                    `;
+                } else {
+                    showAlert('Por favor completa ambos campos');
+                }
+            });
+        }
+
+        function createErrorInterface() {
+            const errorContainer = document.createElement('div');
+            errorContainer.id = 'errorContainer';
+            errorContainer.innerHTML = `
+                <h1>Error 404</h1>
+                <p>La página que estás buscando no existe.</p>
+            `;
+            document.body.appendChild(errorContainer);
+        }
+
+        function setSession() {
+            const sessionId = new Date().toISOString();
+            localStorage.setItem('sessionId', sessionId);
+        }
+
+        function clearSession() {
+            localStorage.removeItem('sessionId');
+        }
+
+        function isLoggedIn() {
+            return localStorage.getItem('sessionId') !== null;
+        }
+
+        window.onload = async () => {
+            const params = new URLSearchParams(window.location.search);
+            const encryptedData = params.get('v');
+            const gen = params.get('gen');
+
+            if (gen === 'true' && !isLoggedIn()) {
+                createLoginInterface();
+            } else if (gen === 'true' && isLoggedIn()) {
+                document.body.innerHTML = '<div id="mainContainer"><div id="sidebar"></div><div id="content"></div></div>';
+                const sidebar = document.getElementById('sidebar');
+                sidebar.innerHTML = `
+                    <button id="uploadButton">Subir a Catbox</button>
+                    <button id="externalUploadButton">Subir video desde otro servidor</button>
+                    <button id="changeCredentialsButton">Cambiar Credenciales</button>
+                    <button id="logoutButton">Cerrar Sesión</button>
+                `;
+
+                document.getElementById('uploadButton').addEventListener('click', createUploadInterface);
+                document.getElementById('externalUploadButton').addEventListener('click', createExternalUploadInterface);
+                document.getElementById('changeCredentialsButton').addEventListener('click', createChangeCredentialsInterface);
+                document.getElementById('logoutButton').addEventListener('click', () => {
+                    clearSession();
+                    location.reload();
+                });
+
+                createUploadInterface();
+
+                // Verificar el estado del proxy al cargar la página
+                const proxyStatusButton = document.createElement('button');
+                proxyStatusButton.id = 'proxyStatusButton';
+                proxyStatusButton.classList.add('status-not-verified');
+                proxyStatusButton.textContent = 'Proxy no verificado';
+                proxyStatusButton.onclick = verifyProxy;
+                sidebar.appendChild(proxyStatusButton);
+                await activateProxy();
+            } else if (encryptedData) {
+                createVideoInterface();
+                const videoUrl = decryptUrl(encryptedData);
+                if (videoUrl) {
+                    setVideoSource(videoUrl);
+                } else {
+                    createErrorInterface();
+                }
+            } else {
+                createErrorInterface();
+            }
+        };
+
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+            if (e.ctrlKey && (e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
