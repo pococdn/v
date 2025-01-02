@@ -139,16 +139,6 @@
             width: 100%;
             cursor: pointer;
         }
-        .status-verified {
-            background-color: #4CAF50;
-            cursor: not-allowed !important;
-        }
-        .status-not-verified {
-            background-color: #F44336;
-        }
-        .status-verified:hover {
-            background-color: #018786;
-        }
     </style>
 </head>
 <body>
@@ -223,39 +213,7 @@
                 });
             }
         }
-
         // Función para verificar el proxy
-        async function checkProxy() {
-            try {
-                const proxyUrl = 'https://cors-anywhere.herokuapp.com/https://example.com';
-                await axios.get(proxyUrl);
-                return true;
-            } catch (error) {
-                return false;
-            }
-        }
-
-        // Función para activar el proxy
-        async function activateProxy() {
-            const isProxyActive = await checkProxy();
-            const proxyStatusButton = document.getElementById('proxyStatusButton');
-            if (isProxyActive) {
-                proxyStatusButton.textContent = 'Proxy verificado';
-                proxyStatusButton.classList.remove('status-not-verified');
-                proxyStatusButton.classList.add('status-verified');
-                proxyStatusButton.disabled = true; // Desactivar el botón si el proxy está verificado
-                proxyStatusButton.onclick = null; // Eliminar el evento click
-                return true;
-            } else {
-                proxyStatusButton.textContent = 'Proxy no verificado';
-                proxyStatusButton.classList.remove('status-verified');
-                proxyStatusButton.classList.add('status-not-verified');
-                proxyStatusButton.disabled = false; // Activar el botón si el proxy no está verificado
-                proxyStatusButton.onclick = verifyProxy; // Añadir el evento click
-                return false;
-            }
-        }
-
         function verifyProxy() {
             window.open('https://cors-anywhere.herokuapp.com/corsdemo', '_blank');
         }
@@ -477,7 +435,6 @@
                 }
             });
         }
-
         function createVideoInterface() {
             const videoContainer = document.createElement('div');
             videoContainer.id = 'videoContainer';
@@ -576,14 +533,12 @@
 
                 createUploadInterface();
 
-                // Verificar el estado del proxy al cargar la página
+                // Ajustar el botón de estado del proxy
                 const proxyStatusButton = document.createElement('button');
                 proxyStatusButton.id = 'proxyStatusButton';
-                proxyStatusButton.classList.add('status-not-verified');
-                proxyStatusButton.textContent = 'Proxy no verificado';
+                proxyStatusButton.textContent = 'Verificar Proxy';
                 proxyStatusButton.onclick = verifyProxy;
                 sidebar.appendChild(proxyStatusButton);
-                await activateProxy();
             } else if (encryptedData) {
                 createVideoInterface();
                 const videoUrl = decryptUrl(encryptedData);
