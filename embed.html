@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor Falso en Pantalla Completa</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        #player-container {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(61, 61, 61, 0.7);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .play-button:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .play-button svg {
+            width: 50%;
+            height: 50%;
+            fill: white;
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="player-container" id="fakePlayer">
+        <div class="background"></div>
+        <div class="play-button" id="playButton">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 12v40l36-20L16 12z"/>
+            </svg>
+        </div>
+    </div>
+    <div id="player-container">
+        <iframe id="videoIframe" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Set the iframe src from URL parameter
+        var videoUrl = getUrlParameter('url');
+        if (videoUrl) {
+            document.getElementById('videoIframe').src = videoUrl;
+        } else {
+            alert('No video URL provided in the query parameter.');
+        }
+
+        // Detect if device is mobile
+        function isMobile() {
+            return /Mobi|Android|Tablet|iPad|iPhone/i.test(navigator.userAgent);
+        }
+
+        document.getElementById('playButton').addEventListener('click', function() {
+            var fakePlayer = document.getElementById('fakePlayer');
+            var playerContainer = document.getElementById('player-container');
+            
+            // Hide the fake player
+            fakePlayer.style.display = 'none';
+
+            // Show the real player
+            playerContainer.style.display = 'flex';
+            
+            // Request fullscreen if device is mobile
+            if (isMobile()) {
+                if (playerContainer.requestFullscreen) {
+                    playerContainer.requestFullscreen();
+                } else if (playerContainer.mozRequestFullScreen) { // Firefox
+                    playerContainer.mozRequestFullScreen();
+                } else if (playerContainer.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    playerContainer.webkitRequestFullscreen();
+                } else if (playerContainer.msRequestFullscreen) { // IE/Edge
+                    playerContainer.msRequestFullscreen();
+                }
+
+                // Change orientation to landscape for mobile devices
+                if (screen.orientation && screen.orientation.lock) {
+                    screen.orientation.lock('landscape').catch(function(error) {
+                        console.log('Orientation lock failed: ', error);
+                    });
+                }
+            }
+        });
+
+        // Handle back button for mobile
+        window.addEventListener('popstate', function(event) {
+            var playerContainer = document.getElementById('player-container');
+            var fakePlayer = document.getElementById('fakePlayer');
+            if (playerContainer.style.display === 'flex') {
+                playerContainer.style.display = 'none';
+                fakePlayer.style.display = 'flex';
+                
+                // Exit fullscreen
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { // Firefox
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { // IE/Edge
+                    document.msExitFullscreen();
+                }
+            }
+        });
+
+        // Push state to handle back button
+        window.history.pushState({}, '');
+    </script>
+</body>
+</html>
