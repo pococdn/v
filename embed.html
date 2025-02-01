@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproductor Falso en Pantalla Completa</title>
+    <title>ReproFast</title>
     <style>
         body, html {
             margin: 0;
@@ -73,7 +73,7 @@
         </div>
     </div>
     <div id="player-container">
-        <iframe id="videoIframe" allowfullscreen></iframe>
+        <iframe id="videoIframe" allow="autoplay" allowfullscreen></iframe>
     </div>
 
     <script>
@@ -98,6 +98,33 @@
             return /Mobi|Android|Tablet|iPad|iPhone/i.test(navigator.userAgent);
         }
 
+        // Function to play the video automatically
+        function playVideo() {
+            var iframe = document.getElementById('videoIframe');
+            var iframeWindow = iframe.contentWindow;
+            iframeWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+        }
+
+        // Function to block pop-ups
+        function blockPopups() {
+            window.open = function() {
+                console.log("Pop-up blocked.");
+                return null;
+            };
+            window.alert = function(message) {
+                console.log("Alert blocked: " + message);
+                return null;
+            };
+            window.confirm = function(message) {
+                console.log("Confirm blocked: " + message);
+                return false;
+            };
+            window.prompt = function(message, defaultResponse) {
+                console.log("Prompt blocked: " + message);
+                return null;
+            };
+        }
+
         document.getElementById('playButton').addEventListener('click', function() {
             var fakePlayer = document.getElementById('fakePlayer');
             var playerContainer = document.getElementById('player-container');
@@ -107,17 +134,20 @@
 
             // Show the real player
             playerContainer.style.display = 'flex';
+
+            // Block pop-ups
+            blockPopups();
             
             // Request fullscreen if device is mobile
             if (isMobile()) {
                 if (playerContainer.requestFullscreen) {
-                    playerContainer.requestFullscreen();
+                    playerContainer.requestFullscreen().then(playVideo);
                 } else if (playerContainer.mozRequestFullScreen) { // Firefox
-                    playerContainer.mozRequestFullScreen();
-                } else if (playerContainer.webkitRequestFullscreen) { // Chrome, Safari and Opera
-                    playerContainer.webkitRequestFullscreen();
+                    playerContainer.mozRequestFullScreen().then(playVideo);
+                } else if (playerContainer.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+                    playerContainer.webkitRequestFullscreen().then(playVideo);
                 } else if (playerContainer.msRequestFullscreen) { // IE/Edge
-                    playerContainer.msRequestFullscreen();
+                    playerContainer.msRequestFullscreen().then(playVideo);
                 }
 
                 // Change orientation to landscape for mobile devices
@@ -126,6 +156,9 @@
                         console.log('Orientation lock failed: ', error);
                     });
                 }
+            } else {
+                // If not mobile, play video directly
+                playVideo();
             }
         });
 
