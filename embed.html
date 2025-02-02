@@ -203,46 +203,21 @@
             
             // Request fullscreen and lock orientation if device is mobile
             if (isMobile()) {
+                try {
+                    // Website 2 APK Builder API call to lock orientation
+                    AndroidFullScreen.lockOrientationLandscape();
+                } catch (e) {
+                    console.log("Error locking orientation: ", e);
+                }
+
                 if (playerContainer.requestFullscreen) {
-                    playerContainer.requestFullscreen().then(() => {
-                        // Lock orientation to landscape
-                        if (screen.orientation && screen.orientation.lock) {
-                            screen.orientation.lock('landscape').catch(function(error) {
-                                console.log('Orientation lock failed: ', error);
-                            });
-                        }
-                        playVideo();
-                    });
+                    playerContainer.requestFullscreen().then(playVideo);
                 } else if (playerContainer.mozRequestFullScreen) { // Firefox
-                    playerContainer.mozRequestFullScreen().then(() => {
-                        // Lock orientation to landscape
-                        if (screen.orientation && screen.orientation.lock) {
-                            screen.orientation.lock('landscape').catch(function(error) {
-                                console.log('Orientation lock failed: ', error);
-                            });
-                        }
-                        playVideo();
-                    });
+                    playerContainer.mozRequestFullScreen().then(playVideo);
                 } else if (playerContainer.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-                    playerContainer.webkitRequestFullscreen().then(() => {
-                        // Lock orientation to landscape
-                        if (screen.orientation && screen.orientation.lock) {
-                            screen.orientation.lock('landscape').catch(function(error) {
-                                console.log('Orientation lock failed: ', error);
-                            });
-                        }
-                        playVideo();
-                    });
+                    playerContainer.webkitRequestFullscreen().then(playVideo);
                 } else if (playerContainer.msRequestFullscreen) { // IE/Edge
-                    playerContainer.msRequestFullscreen().then(() => {
-                        // Lock orientation to landscape
-                        if (screen.orientation && screen.orientation.lock) {
-                            screen.orientation.lock('landscape').catch(function(error) {
-                                console.log('Orientation lock failed: ', error);
-                            });
-                        }
-                        playVideo();
-                    });
+                    playerContainer.msRequestFullscreen().then(playVideo);
                 }
             } else {
                 // If not mobile, play video directly
