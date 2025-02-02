@@ -201,15 +201,8 @@
             // Block pop-ups
             blockPopups();
             
-            // Request fullscreen and lock orientation if device is mobile
+            // Request fullscreen if device is mobile
             if (isMobile()) {
-                try {
-                    // Website 2 APK Builder API call to lock orientation
-                    AndroidFullScreen.lockOrientationLandscape();
-                } catch (e) {
-                    console.log("Error locking orientation: ", e);
-                }
-
                 if (playerContainer.requestFullscreen) {
                     playerContainer.requestFullscreen().then(playVideo);
                 } else if (playerContainer.mozRequestFullScreen) { // Firefox
@@ -218,6 +211,13 @@
                     playerContainer.webkitRequestFullscreen().then(playVideo);
                 } else if (playerContainer.msRequestFullscreen) { // IE/Edge
                     playerContainer.msRequestFullscreen().then(playVideo);
+                }
+
+                // Change orientation to landscape for mobile devices
+                if (screen.orientation && screen.orientation.lock) {
+                    screen.orientation.lock('landscape').catch(function(error) {
+                        console.log('Orientation lock failed: ', error);
+                    });
                 }
             } else {
                 // If not mobile, play video directly
