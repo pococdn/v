@@ -201,22 +201,47 @@
             // Block pop-ups
             blockPopups();
             
-            // Request fullscreen if device is mobile
+            // Request fullscreen and lock orientation if device is mobile
             if (isMobile()) {
                 if (playerContainer.requestFullscreen) {
-                    playerContainer.requestFullscreen().then(playVideo);
+                    playerContainer.requestFullscreen().then(() => {
+                        // Lock orientation to landscape
+                        if (screen.orientation && screen.orientation.lock) {
+                            screen.orientation.lock('landscape').catch(function(error) {
+                                console.log('Orientation lock failed: ', error);
+                            });
+                        }
+                        playVideo();
+                    });
                 } else if (playerContainer.mozRequestFullScreen) { // Firefox
-                    playerContainer.mozRequestFullScreen().then(playVideo);
+                    playerContainer.mozRequestFullScreen().then(() => {
+                        // Lock orientation to landscape
+                        if (screen.orientation && screen.orientation.lock) {
+                            screen.orientation.lock('landscape').catch(function(error) {
+                                console.log('Orientation lock failed: ', error);
+                            });
+                        }
+                        playVideo();
+                    });
                 } else if (playerContainer.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-                    playerContainer.webkitRequestFullscreen().then(playVideo);
+                    playerContainer.webkitRequestFullscreen().then(() => {
+                        // Lock orientation to landscape
+                        if (screen.orientation && screen.orientation.lock) {
+                            screen.orientation.lock('landscape').catch(function(error) {
+                                console.log('Orientation lock failed: ', error);
+                            });
+                        }
+                        playVideo();
+                    });
                 } else if (playerContainer.msRequestFullscreen) { // IE/Edge
-                    playerContainer.msRequestFullscreen().then(playVideo);
-                }
-
-                // Change orientation to landscape for mobile devices
-                if (screen.orientation && screen.orientation.lock) {
-                    screen.orientation.lock('landscape').catch(function(error) {
-                        console.log('Orientation lock failed: ', error);
+                    playerContainer.msRequestFullscreen().then(() => {
+                        // Lock orientation to landscape
+                        if (screen.orientation && screen.orientation.lock) {
+                            screen.orientation.lock('landscape').catch(function(error) {
+                                console.log('Orientation lock failed: ', error);
+                            });
+                        }
+                        playVideo();
                     });
                 }
             } else {
