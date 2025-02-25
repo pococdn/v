@@ -48,6 +48,221 @@
             </person>
         </cast>
     </movie>
+    <movie id="movie_4">
+        <title>The Witcher: Sirenas de las profundidades</title>
+        <genre>Animación, Fantasía, Acción</genre>
+        <year>2025</year>
+        <poster>https://image.tmdb.org/t/p/w500/eSwQudxKlJnI4tjDKi47aTAvTmj.jpg</poster>
+        <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b52/lYdnsawWQXqaCWzvUIP.mp4</url>
+        <backgroundImage>https://image.tmdb.org/t/p/w1280/1YL8ksfwm3p2Tgt1yaNVYYOvOKC.jpg</backgroundImage>
+        <logo>https://image.tmdb.org/t/p/w500/uGpFLQymBzIrdON6pmtcqtq8ZTJ.png</logo>
+        <description>Cuando unos misteriosos seres de las profundidades atacan a unos marineros, solo hay alguien que puede impedir que estalle la guerra entre la tierra y el mar: Geralt de Rivia.</description>
+        <rating>7.1</rating>
+        <cast>
+            <person>
+                <name>Doug Cockle</name>
+                <image>https://image.tmdb.org/t/p/w200/sQGrr2Sjn5o9hrKvcFEnCyTuNw4.jpg</image>
+                <role>Geralt (voice)</role>
+            </person>
+            <person>
+                <name>Joey Batey</name>
+                <image>https://image.tmdb.org/t/p/w200/4uo4JPaK6KpdN7v8C1pbwKpNVJU.jpg</image>
+                <role>Jaskier / Young Jaskier (voice)</role>
+            </person>
+            <person>
+                <name>Christina Wren</name>
+                <image>https://image.tmdb.org/t/p/w200/hMQoxG3XQ0b8Hmx9gVNn6krvU2T.jpg</image>
+                <role>Essi (voice)</role>
+            </person>
+            <person>
+                <name>Emily Carey</name>
+                <image>https://image.tmdb.org/t/p/w200/tWUHikgtPCAPgYVrReXAPjMYNAW.jpg</image>
+                <role>Sh&apos;eenaz (voice)</role>
+            </person>
+            <person>
+                <name>Camrus Johnson</name>
+                <image>https://image.tmdb.org/t/p/w200/opaEeDwL8wgwuwJrC0KpQe5obG5.jpg</image>
+                <role>Agloval (voice)</role>
+            </person>
+            <person>
+                <name>강희철</name>
+                <image>https://picsum.photos/300/450</image>
+                <role>Director</role>
+            </person>
+        </cast>
+    </movie>
+    <movie id="movie_5">
+        <title>Calendario mortal</title>
+        <genre>Crimen, Suspense</genre>
+        <year>2024</year>
+        <poster>https://image.tmdb.org/t/p/w500/p6ALxjTM4YUdiCRmHCkZLE6r2pG.jpg</poster>
+        <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b51/YgUhTSXilogSnoCjsVxv.mp4</url>
+        <backgroundImage>https://image.tmdb.org/t/p/w1280/haX32ZQxOgDWcJO5sTiTUEE1Ulr.jpg</backgroundImage>
+        <logo>https://image.tmdb.org/t/p/w500/m9c9H2puKOWSPfuUAnIIKXPMe9j.png</logo>
+        <description>Jules recibe una llamada de Klara, quien le informa que morirá esa noche a menos que mate a su esposo. La elección de la víctima está en manos de la persona que recibe la llamada del asesino del calendario.</description>
+        <rating>6.2</rating>
+        <cast>
+            <person>
+                <name>Luise Heyer</name>
+                <image>https://image.tmdb.org/t/p/w200/ffPzIu201oXjT1R0RCW4loZaxQA.jpg</image>
+                <role>Klara</role>
+            </person>
+            <person>
+                <name>Sabin Tambrea</name>
+                <image>https://image.tmdb.org/t/p/w200/r7XuC8cbItvHgbmpekT6RwI8pzc.jpg</image>
+                <role>Jules</role>
+            </person>
+            <person>
+                <name>Friedrich Mücke</name>
+                <image>https://image.tmdb.org/t/p/w200/3NqiciP1dtsOKx9GRPf2kuZ7XPh.jpg</image>
+                <role>Martin</role>
+            </person>
+            <person>
+                <name>Rainer Bock</name>
+                <image>https://image.tmdb.org/t/p/w200/wLn46JXsZDt0pVnheUEWJZ8IvHo.jpg</image>
+                <role>HC</role>
+            </person>
+            <person>
+                <name>Andreas Döhler</name>
+                <image>https://image.tmdb.org/t/p/w200/ie0EpjPa9bZvaqNJKR21xKjs4hf.jpg</image>
+                <role>Hendrik</role>
+            </person>
+            <person>
+                <name>Adolfo J. Kolmerer</name>
+                <image>https://image.tmdb.org/t/p/w200/7Aj7qTa48pp1D1YmHKuVdLPeNEe.jpg</image>
+                <role>Director</role>
+            </person>
+        </cast>
+    </movie>
+    <movie id="movie_6">
+        <title>Culpa tuya</title>
+        <genre>Romance, Drama</genre>
+        <year>2024</year>
+        <poster>https://image.tmdb.org/t/p/w500/1jvCVdlgInyItAUEvvvCakm1Yxz.jpg</poster>
+        <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b51/CrsUBNQiGKtqouxsqicv.mp4</url>
+        <backgroundImage>https://image.tmdb.org/t/p/w1280/k24eZq5I3jyz4htPkZCRpnUmBzE.jpg</backgroundImage>
+        <logo>https://image.tmdb.org/t/p/w500/tXYv8Q4pf2xuRaX5OrmH8d9AUK2.png</logo>
+        <description>El amor entre Noah y Nick parece inquebrantable, a pesar de las maniobras de sus padres por separarles. Pero el trabajo de él y la entrada de ella en la universidad, abre sus vidas a nuevas relaciones. La aparición de una exnovia que busca venganza y de la madre Nick con intenciones poco claras, removerán los cimientos no solo de su relación, sino de la propia familia Leister. Cuando tantas personas están dispuestas a destruir una relación, ¿puede realmente acabar bien?</description>
+        <rating>7.1</rating>
+        <cast>
+            <person>
+                <name>Nicole Wallace</name>
+                <image>https://image.tmdb.org/t/p/w200/xlvq6OYCN6yQef4fpJQtwVyQxqr.jpg</image>
+                <role>Noah Morgan</role>
+            </person>
+            <person>
+                <name>Gabriel Guevara</name>
+                <image>https://image.tmdb.org/t/p/w200/pviRYKEEmoPUfLYwP1VHJ6LQcRg.jpg</image>
+                <role>Nick Leister</role>
+            </person>
+            <person>
+                <name>Marta Hazas</name>
+                <image>https://image.tmdb.org/t/p/w200/1dbeTFRCbWBt70dIGjYHKVLnpaG.jpg</image>
+                <role>Rafaela</role>
+            </person>
+            <person>
+                <name>Iván Sánchez</name>
+                <image>https://image.tmdb.org/t/p/w200/woVz8D7t1VUKjFJnsTAdc8tyz5C.jpg</image>
+                <role>William Leister</role>
+            </person>
+            <person>
+                <name>Eva Ruiz</name>
+                <image>https://image.tmdb.org/t/p/w200/bcu0nmQvhxwTzh4csc4kuxJsQee.jpg</image>
+                <role>Jenna</role>
+            </person>
+            <person>
+                <name>Domingo González</name>
+                <image>https://image.tmdb.org/t/p/w200/bTf1OPwNZSIbVHl7SII6Yv429G4.jpg</image>
+                <role>Director</role>
+            </person>
+        </cast>
+    </movie>
+    <movie id="movie_7">
+        <title>¡Estáis cordialmente invitados!</title>
+        <genre>Comedia</genre>
+        <year>2025</year>
+        <poster>https://image.tmdb.org/t/p/w500/14jxZmclGIqAQ4xtYXYKhvRLTwx.jpg</poster>
+        <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b51/aFYFOoHvdXEurKIajywr.mp4</url>
+        <backgroundImage>https://image.tmdb.org/t/p/w1280/xaNBpBkONtupAVJqQBIW5EZa7xi.jpg</backgroundImage>
+        <logo>https://image.tmdb.org/t/p/w500/na37a1odzixk5QR2AkEoLHYV5DA.png</logo>
+        <description>Una mujer que está planeando la boda de su hermana y el padre de otra futura novia descubren que tienen doble reserva para su destino, por lo que ambas partes deciden compartir el lugar, pero el caos y el desastre les esperan.</description>
+        <rating>6.0</rating>
+        <cast>
+            <person>
+                <name>Will Ferrell</name>
+                <image>https://image.tmdb.org/t/p/w200/vL1QjMdMtuM2f8fQZzei6WAvicZ.jpg</image>
+                <role>Jim</role>
+            </person>
+            <person>
+                <name>Reese Witherspoon</name>
+                <image>https://image.tmdb.org/t/p/w200/o1z4UwW2137IViFIRk8AV8hWze1.jpg</image>
+                <role>Margot</role>
+            </person>
+            <person>
+                <name>Geraldine Viswanathan</name>
+                <image>https://image.tmdb.org/t/p/w200/mZ1dKqL2ymRipGEudzr8TQliB52.jpg</image>
+                <role>Jenni</role>
+            </person>
+            <person>
+                <name>Meredith Hagner</name>
+                <image>https://image.tmdb.org/t/p/w200/cRXnuFmhZ1FpuuixGaslHZ0B5op.jpg</image>
+                <role>Neve</role>
+            </person>
+            <person>
+                <name>Jimmy Tatro</name>
+                <image>https://image.tmdb.org/t/p/w200/xehT2IK65qXKSctcYChrWLE04pI.jpg</image>
+                <role>Dixon</role>
+            </person>
+            <person>
+                <name>Nicholas Stoller</name>
+                <image>https://image.tmdb.org/t/p/w200/247iI9VZHnKB9QteCIUheKAAZtI.jpg</image>
+                <role>Director</role>
+            </person>
+        </cast>
+    </movie>
+    <movie id="movie_8">
+        <title>Gru 4. Mi villano favorito</title>
+        <genre>Animación, Familia, Comedia, Ciencia ficción</genre>
+        <year>2024</year>
+        <poster>https://image.tmdb.org/t/p/w500/wTpzSDfbUuHPEgqgt5vwVtPHhrb.jpg</poster>
+        <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b51/LmOGumMsvztqerMlhWHZ.mp4</url>
+        <backgroundImage>https://image.tmdb.org/t/p/w1280/lgkPzcOSnTvjeMnuFzozRO5HHw1.jpg</backgroundImage>
+        <logo>https://image.tmdb.org/t/p/w500/lSbb8Ev1pN67nDYqzuApaVsS3pe.png</logo>
+        <description>Gru, Lucy y las niñas -Margo, Edith y Agnes- dan la bienvenida a un nuevo miembro en la familia: Gru Junior, que parece llegar con el propósito de ser un suplicio para su padre. Gru tendrá que enfrentarse en esta ocasión a su nueva némesis Maxime Le Mal y su sofisticada y malévola novia Valentina, lo que obligará a la familia a tener que darse a la fuga. Cuarta entrega de &apos;Gru, mi villano favorito&apos;.</description>
+        <rating>7.1</rating>
+        <cast>
+            <person>
+                <name>Steve Carell</name>
+                <image>https://image.tmdb.org/t/p/w200/dA6n0qpnlMFBlTr8SBULsZbWkvn.jpg</image>
+                <role>Gru (voice)</role>
+            </person>
+            <person>
+                <name>Kristen Wiig</name>
+                <image>https://image.tmdb.org/t/p/w200/N517EQh7j4mNl3BStMmjMN6hId.jpg</image>
+                <role>Lucy (voice)</role>
+            </person>
+            <person>
+                <name>Will Ferrell</name>
+                <image>https://image.tmdb.org/t/p/w200/vL1QjMdMtuM2f8fQZzei6WAvicZ.jpg</image>
+                <role>Maxime (voice)</role>
+            </person>
+            <person>
+                <name>Sofía Vergara</name>
+                <image>https://image.tmdb.org/t/p/w200/l79eVtn6bSOaiq7R0UGu60foMrK.jpg</image>
+                <role>Valentina (voice)</role>
+            </person>
+            <person>
+                <name>Miranda Cosgrove</name>
+                <image>https://image.tmdb.org/t/p/w200/qIGeoyXEVu1LxTH34TWx1YSHyQr.jpg</image>
+                <role>Margo (voice)</role>
+            </person>
+            <person>
+                <name>Chris Renaud</name>
+                <image>https://image.tmdb.org/t/p/w200/sumBJgBqRkK4XEJ2JYXpad3MTJs.jpg</image>
+                <role>Director</role>
+            </person>
+        </cast>
+    </movie>
     <serie id="serie_1">
         <title>En la victoria o en la derrota</title>
         <genre>Animación, Comedia, Familia</genre>
