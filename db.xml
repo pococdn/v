@@ -263,6 +263,92 @@
             </person>
         </cast>
     </movie>
+    <movie id="movie_9">
+        <title>Elevation</title>
+        <genre>Acción, Ciencia ficción, Suspense</genre>
+        <year>2024</year>
+        <poster>https://image.tmdb.org/t/p/w500/92cd9vR6ThBqT6Pe6m5daxX0rAk.jpg</poster>
+        <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b52/sQghWETVlGEKxeaTnug.mp4</url>
+        <backgroundImage>https://image.tmdb.org/t/p/w1280/au3o84ub27qTZiMiEc9UYzN74V3.jpg</backgroundImage>
+        <logo>https://image.tmdb.org/t/p/w500/5ZcebxdEL5Q8gkgxGRRf22cVdBK.png</logo>
+        <description>Un padre soltero y dos mujeres se aventuran desde la seguridad de sus hogares a enfrentarse a criaturas monstruosas para salvar la vida de un niño.</description>
+        <rating>6.4</rating>
+        <cast>
+            <person>
+                <name>Anthony Mackie</name>
+                <image>https://image.tmdb.org/t/p/w200/eZSIDrtTzhvabyjrmIITQLsjx8h.jpg</image>
+                <role>Will</role>
+            </person>
+            <person>
+                <name>Morena Baccarin</name>
+                <image>https://image.tmdb.org/t/p/w200/kBSKKaOtsqIzZPhtEeHfCBmhWl9.jpg</image>
+                <role>Nina</role>
+            </person>
+            <person>
+                <name>Maddie Hasson</name>
+                <image>https://image.tmdb.org/t/p/w200/eH6SnpMGDC9CQScmIchSnKkZAbc.jpg</image>
+                <role>Katie</role>
+            </person>
+            <person>
+                <name>Danny Boyd Jr.</name>
+                <image>https://image.tmdb.org/t/p/w200/k6ewXmzmCJa71bQmmEifmy11ezt.jpg</image>
+                <role>Hunter</role>
+            </person>
+            <person>
+                <name>Rachel Nicks</name>
+                <image>https://image.tmdb.org/t/p/w200/wJx6DHJ5S5IGvj61yUUPtKzr9cf.jpg</image>
+                <role>Tara</role>
+            </person>
+            <person>
+                <name>George Nolfi</name>
+                <image>https://image.tmdb.org/t/p/w200/dYr20UCtki5iRg0k2zSKjG36QKy.jpg</image>
+                <role>Director</role>
+            </person>
+        </cast>
+    </movie>
+    <movie id="movie_10">
+        <title>Deadpool y Lobezno</title>
+        <genre>Acción, Comedia, Ciencia ficción</genre>
+        <year>2024</year>
+        <poster>https://image.tmdb.org/t/p/w500/347cCxyMXy8WkcHfsfaPaugCyPA.jpg</poster>
+        <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b52/RHEhOmEysqqPEWKwbrej.mp4</url>
+        <backgroundImage>https://image.tmdb.org/t/p/w1280/by8z9Fe8y7p4jo2YlW2SZDnptyT.jpg</backgroundImage>
+        <logo>https://image.tmdb.org/t/p/w500/9mAPpTbG0GinS9WaBFTW8llRqo7.png</logo>
+        <description>Un apático Wade Wilson se afana en la vida civil tras dejar atrás sus días como Deadpool, un mercenario moralmente flexible. Pero cuando su mundo natal se enfrenta a una amenaza existencial, Wade debe volver a vestirse a regañadientes con un Lobezno aún más reacio a ayudar.</description>
+        <rating>7.6</rating>
+        <cast>
+            <person>
+                <name>Ryan Reynolds</name>
+                <image>https://image.tmdb.org/t/p/w200/4SYTH5FdB0dAORV98Nwg3llgVnY.jpg</image>
+                <role>Wade Wilson / Deadpool / Nicepool</role>
+            </person>
+            <person>
+                <name>Hugh Jackman</name>
+                <image>https://image.tmdb.org/t/p/w200/4Xujtewxqt6aU0Y81tsS9gkjizk.jpg</image>
+                <role>Logan / Wolverine</role>
+            </person>
+            <person>
+                <name>Emma Corrin</name>
+                <image>https://image.tmdb.org/t/p/w200/wqGOVOsHzZaHeHymIS40elGCnY0.jpg</image>
+                <role>Cassandra Nova</role>
+            </person>
+            <person>
+                <name>Matthew Macfadyen</name>
+                <image>https://image.tmdb.org/t/p/w200/2FF3Yjxd7DYR4EIJL6s2GpKDMkJ.jpg</image>
+                <role>Mr. Paradox</role>
+            </person>
+            <person>
+                <name>Dafne Keen</name>
+                <image>https://image.tmdb.org/t/p/w200/g325OIjIHrFr0te8ewPfhKQ2SKj.jpg</image>
+                <role>Laura / X-23</role>
+            </person>
+            <person>
+                <name>Shawn Levy</name>
+                <image>https://image.tmdb.org/t/p/w200/b1ulkCHz8biG87LjLQQiMCebEZo.jpg</image>
+                <role>Director</role>
+            </person>
+        </cast>
+    </movie>
     <serie id="serie_1">
         <title>En la victoria o en la derrota</title>
         <genre>Animación, Comedia, Familia</genre>
@@ -300,10 +386,16 @@
             </person>
         </cast>
         <episode id="episode_2" />
+        <episode id="episode_11" />
     </serie>
     <episode id="episode_2">
         <title>La hija del entrenador</title>
         <poster>https://image.tmdb.org/t/p/w500/d0vFgWv0iIHTPLeEUC57fgBo6yV.jpg</poster>
         <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b52/igPEkQbaiuPzNKXHqzaf.mp4</url>
+    </episode>
+    <episode id="episode_11">
+        <title>Árbitro</title>
+        <poster>https://image.tmdb.org/t/p/w500/zJOoJjh6ZBGbhjZTLsz9WqsQycH.jpg</poster>
+        <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b52/eCPZrauxlecDMuokHfD.mp4</url>
     </episode>
 </media>
