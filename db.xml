@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<media>
+    <movie id="movie_3">
+        <title>Vaiana 2</title>
+        <genre>Animación, Aventura, Familia, Comedia</genre>
+        <year>2024</year>
+        <poster>https://image.tmdb.org/t/p/w500/1b2sEjyhc6kqZD4SazdVlVLuIyh.jpg</poster>
+        <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b52/LsoKsoBjnXmWEShoNgzl.mp4</url>
+        <backgroundImage>https://image.tmdb.org/t/p/w1280/zo8CIjJ2nfNOevqNajwMRO6Hwka.jpg</backgroundImage>
+        <logo>https://image.tmdb.org/t/p/w500/6y1b2fmGr4ZoIxMcQRBF0PQ6Sw.png</logo>
+        <description>Tras recibir una inesperada llamada de sus antepasados, Vaiana debe viajar a los lejanos mares de Oceanía y adentrarse en peligrosas aguas perdidas para vivir una aventura sin precedentes.</description>
+        <rating>7.2</rating>
+        <cast>
+            <person>
+                <name>Auliʻi Cravalho</name>
+                <image>https://image.tmdb.org/t/p/w200/vEroqcnM2g6yY7qXDAie7hx2Cyp.jpg</image>
+                <role>Moana (voice)</role>
+            </person>
+            <person>
+                <name>Dwayne Johnson</name>
+                <image>https://image.tmdb.org/t/p/w200/5QApZVV8FUFlVxQpIK3Ew6cqotq.jpg</image>
+                <role>Maui (voice)</role>
+            </person>
+            <person>
+                <name>Hualālai Chung</name>
+                <image>https://image.tmdb.org/t/p/w200/x2g5fdHqETY9dZgL4aB0QDP0boR.jpg</image>
+                <role>Moni (voice)</role>
+            </person>
+            <person>
+                <name>Rose Matafeo</name>
+                <image>https://image.tmdb.org/t/p/w200/zQa39fMjbOTIsovbh1TBTJVlToz.jpg</image>
+                <role>Loto (voice)</role>
+            </person>
+            <person>
+                <name>David Fane</name>
+                <image>https://image.tmdb.org/t/p/w200/tcozyaTgAa8rRmzc5qeht0loni6.jpg</image>
+                <role>Kele (voice)</role>
+            </person>
+            <person>
+                <name>David G. Derrick Jr.</name>
+                <image>https://image.tmdb.org/t/p/w200/j5JOtRua5KduoPsQVix0rwY3jOo.jpg</image>
+                <role>Director</role>
+            </person>
+            <person>
+                <name>Jason Hand</name>
+                <image>https://image.tmdb.org/t/p/w200/gepbkgavGdDXdNbQzdFaxayTpoH.jpg</image>
+                <role>Director</role>
+            </person>
+        </cast>
+    </movie>
+    <serie id="serie_1">
+        <title>En la victoria o en la derrota</title>
+        <genre>Animación, Comedia, Familia</genre>
+        <seasons>1</seasons>
+        <poster>https://image.tmdb.org/t/p/w500/sp54jkorVJHQ52WE5U7rbNjGnrC.jpg</poster>
+        <backgroundImage>https://image.tmdb.org/t/p/w1280/tuToCybeasRLXrzQLre9eSutS5b.jpg</backgroundImage>
+        <logo>https://image.tmdb.org/t/p/w500/7hpESaCrPKj4L0JQdrHbJ5XRxMO.png</logo>
+        <description>Se acerca la final del campeonato, y ocho personajes se enfrentan a las malas jugadas de la vida.</description>
+        <rating>8.0</rating>
+        <cast>
+            <person>
+                <name>Will Forte</name>
+                <image>https://image.tmdb.org/t/p/w200/kphnirb7YggSVEhGI47kACxaIJQ.jpg</image>
+                <role>Coach Dan (voice)</role>
+            </person>
+            <person>
+                <name>Rosanna Jean Foss</name>
+                <image>https://picsum.photos/300/450</image>
+                <role>Laurie (voice)</role>
+            </person>
+            <person>
+                <name>Josh Thomson</name>
+                <image>https://image.tmdb.org/t/p/w200/pQXIK0Us9sj4szRPMhX5t5ftQ4i.jpg</image>
+                <role>Frank (voice)</role>
+            </person>
+            <person>
+                <name>Milan Ray</name>
+                <image>https://image.tmdb.org/t/p/w200/ptV1iZiPTKpKr2D1fIVTD5bMeR0.jpg</image>
+                <role>Rochelle (voice)</role>
+            </person>
+            <person>
+                <name>Rosa Salazar</name>
+                <image>https://image.tmdb.org/t/p/w200/pc2tCeB99HtmrghAoPKksZkbzUU.jpg</image>
+                <role>Vanessa (voice)</role>
+            </person>
+        </cast>
+        <episode id="episode_2" />
+    </serie>
+    <episode id="episode_2">
+        <title>La hija del entrenador</title>
+        <poster>https://image.tmdb.org/t/p/w500/d0vFgWv0iIHTPLeEUC57fgBo6yV.jpg</poster>
+        <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b52/igPEkQbaiuPzNKXHqzaf.mp4</url>
+    </episode>
+</media>
