@@ -390,11 +390,13 @@
     </serie>
     <episode id="episode_2">
         <title>La hija del entrenador</title>
+        <season>1</season>
         <poster>https://image.tmdb.org/t/p/w500/d0vFgWv0iIHTPLeEUC57fgBo6yV.jpg</poster>
         <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b52/igPEkQbaiuPzNKXHqzaf.mp4</url>
     </episode>
     <episode id="episode_11">
         <title>Árbitro</title>
+        <season>1</season>
         <poster>https://image.tmdb.org/t/p/w500/zJOoJjh6ZBGbhjZTLsz9WqsQycH.jpg</poster>
         <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b52/eCPZrauxlecDMuokHfD.mp4</url>
     </episode>
