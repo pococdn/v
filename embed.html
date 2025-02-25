@@ -201,28 +201,8 @@
             // Block pop-ups
             blockPopups();
             
-            // Request fullscreen if device is mobile
-            if (isMobile()) {
-                if (playerContainer.requestFullscreen) {
-                    playerContainer.requestFullscreen().then(playVideo);
-                } else if (playerContainer.mozRequestFullScreen) { // Firefox
-                    playerContainer.mozRequestFullScreen().then(playVideo);
-                } else if (playerContainer.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-                    playerContainer.webkitRequestFullscreen().then(playVideo);
-                } else if (playerContainer.msRequestFullscreen) { // IE/Edge
-                    playerContainer.msRequestFullscreen().then(playVideo);
-                }
-
-                // Change orientation to landscape for mobile devices
-                if (screen.orientation && screen.orientation.lock) {
-                    screen.orientation.lock('landscape').catch(function(error) {
-                        console.log('Orientation lock failed: ', error);
-                    });
-                }
-            } else {
-                // If not mobile, play video directly
-                playVideo();
-            }
+            // Play video
+            playVideo();
         });
 
         // Handle back button for mobile
