@@ -2,17 +2,17 @@
 <media>
     <movie id="movie_3">
         <title>Vaiana 2</title>
-        <genre>Animación, Aventura, Familia, Comedia</genre>
+        <genre>AnimaciÃ³n, Aventura, Familia, Comedia</genre>
         <year>2024</year>
         <poster>https://image.tmdb.org/t/p/w500/1b2sEjyhc6kqZD4SazdVlVLuIyh.jpg</poster>
         <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b52/LsoKsoBjnXmWEShoNgzl.mp4</url>
         <backgroundImage>https://image.tmdb.org/t/p/w1280/zo8CIjJ2nfNOevqNajwMRO6Hwka.jpg</backgroundImage>
         <logo>https://image.tmdb.org/t/p/w500/6y1b2fmGr4ZoIxMcQRBF0PQ6Sw.png</logo>
-        <description>Tras recibir una inesperada llamada de sus antepasados, Vaiana debe viajar a los lejanos mares de Oceanía y adentrarse en peligrosas aguas perdidas para vivir una aventura sin precedentes.</description>
+        <description>Tras recibir una inesperada llamada de sus antepasados, Vaiana debe viajar a los lejanos mares de OceanÃ­a y adentrarse en peligrosas aguas perdidas para vivir una aventura sin precedentes.</description>
         <rating>7.2</rating>
         <cast>
             <person>
-                <name>Auliʻi Cravalho</name>
+                <name>AuliÊ»i Cravalho</name>
                 <image>https://image.tmdb.org/t/p/w200/vEroqcnM2g6yY7qXDAie7hx2Cyp.jpg</image>
                 <role>Moana (voice)</role>
             </person>
@@ -22,7 +22,7 @@
                 <role>Maui (voice)</role>
             </person>
             <person>
-                <name>Hualālai Chung</name>
+                <name>HualÄlai Chung</name>
                 <image>https://image.tmdb.org/t/p/w200/x2g5fdHqETY9dZgL4aB0QDP0boR.jpg</image>
                 <role>Moni (voice)</role>
             </person>
@@ -50,7 +50,7 @@
     </movie>
     <movie id="movie_4">
         <title>The Witcher: Sirenas de las profundidades</title>
-        <genre>Animación, Fantasía, Acción</genre>
+        <genre>AnimaciÃ³n, FantasÃ­a, AcciÃ³n</genre>
         <year>2025</year>
         <poster>https://image.tmdb.org/t/p/w500/eSwQudxKlJnI4tjDKi47aTAvTmj.jpg</poster>
         <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b52/lYdnsawWQXqaCWzvUIP.mp4</url>
@@ -85,7 +85,7 @@
                 <role>Agloval (voice)</role>
             </person>
             <person>
-                <name>강희철</name>
+                <name>ê°•í¬ì² </name>
                 <image>https://picsum.photos/300/450</image>
                 <role>Director</role>
             </person>
@@ -99,7 +99,7 @@
         <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b51/YgUhTSXilogSnoCjsVxv.mp4</url>
         <backgroundImage>https://image.tmdb.org/t/p/w1280/haX32ZQxOgDWcJO5sTiTUEE1Ulr.jpg</backgroundImage>
         <logo>https://image.tmdb.org/t/p/w500/m9c9H2puKOWSPfuUAnIIKXPMe9j.png</logo>
-        <description>Jules recibe una llamada de Klara, quien le informa que morirá esa noche a menos que mate a su esposo. La elección de la víctima está en manos de la persona que recibe la llamada del asesino del calendario.</description>
+        <description>Jules recibe una llamada de Klara, quien le informa que morirÃ¡ esa noche a menos que mate a su esposo. La elecciÃ³n de la vÃ­ctima estÃ¡ en manos de la persona que recibe la llamada del asesino del calendario.</description>
         <rating>6.2</rating>
         <cast>
             <person>
@@ -113,7 +113,7 @@
                 <role>Jules</role>
             </person>
             <person>
-                <name>Friedrich Mücke</name>
+                <name>Friedrich MÃ¼cke</name>
                 <image>https://image.tmdb.org/t/p/w200/3NqiciP1dtsOKx9GRPf2kuZ7XPh.jpg</image>
                 <role>Martin</role>
             </person>
@@ -123,7 +123,7 @@
                 <role>HC</role>
             </person>
             <person>
-                <name>Andreas Döhler</name>
+                <name>Andreas DÃ¶hler</name>
                 <image>https://image.tmdb.org/t/p/w200/ie0EpjPa9bZvaqNJKR21xKjs4hf.jpg</image>
                 <role>Hendrik</role>
             </person>
@@ -142,7 +142,7 @@
         <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b51/CrsUBNQiGKtqouxsqicv.mp4</url>
         <backgroundImage>https://image.tmdb.org/t/p/w1280/k24eZq5I3jyz4htPkZCRpnUmBzE.jpg</backgroundImage>
         <logo>https://image.tmdb.org/t/p/w500/tXYv8Q4pf2xuRaX5OrmH8d9AUK2.png</logo>
-        <description>El amor entre Noah y Nick parece inquebrantable, a pesar de las maniobras de sus padres por separarles. Pero el trabajo de él y la entrada de ella en la universidad, abre sus vidas a nuevas relaciones. La aparición de una exnovia que busca venganza y de la madre Nick con intenciones poco claras, removerán los cimientos no solo de su relación, sino de la propia familia Leister. Cuando tantas personas están dispuestas a destruir una relación, ¿puede realmente acabar bien?</description>
+        <description>El amor entre Noah y Nick parece inquebrantable, a pesar de las maniobras de sus padres por separarles. Pero el trabajo de Ã©l y la entrada de ella en la universidad, abre sus vidas a nuevas relaciones. La apariciÃ³n de una exnovia que busca venganza y de la madre Nick con intenciones poco claras, removerÃ¡n los cimientos no solo de su relaciÃ³n, sino de la propia familia Leister. Cuando tantas personas estÃ¡n dispuestas a destruir una relaciÃ³n, Â¿puede realmente acabar bien?</description>
         <rating>7.1</rating>
         <cast>
             <person>
@@ -161,7 +161,7 @@
                 <role>Rafaela</role>
             </person>
             <person>
-                <name>Iván Sánchez</name>
+                <name>IvÃ¡n SÃ¡nchez</name>
                 <image>https://image.tmdb.org/t/p/w200/woVz8D7t1VUKjFJnsTAdc8tyz5C.jpg</image>
                 <role>William Leister</role>
             </person>
@@ -171,21 +171,21 @@
                 <role>Jenna</role>
             </person>
             <person>
-                <name>Domingo González</name>
+                <name>Domingo GonzÃ¡lez</name>
                 <image>https://image.tmdb.org/t/p/w200/bTf1OPwNZSIbVHl7SII6Yv429G4.jpg</image>
                 <role>Director</role>
             </person>
         </cast>
     </movie>
     <movie id="movie_7">
-        <title>¡Estáis cordialmente invitados!</title>
+        <title>Â¡EstÃ¡is cordialmente invitados!</title>
         <genre>Comedia</genre>
         <year>2025</year>
         <poster>https://image.tmdb.org/t/p/w500/14jxZmclGIqAQ4xtYXYKhvRLTwx.jpg</poster>
         <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b51/aFYFOoHvdXEurKIajywr.mp4</url>
         <backgroundImage>https://image.tmdb.org/t/p/w1280/xaNBpBkONtupAVJqQBIW5EZa7xi.jpg</backgroundImage>
         <logo>https://image.tmdb.org/t/p/w500/na37a1odzixk5QR2AkEoLHYV5DA.png</logo>
-        <description>Una mujer que está planeando la boda de su hermana y el padre de otra futura novia descubren que tienen doble reserva para su destino, por lo que ambas partes deciden compartir el lugar, pero el caos y el desastre les esperan.</description>
+        <description>Una mujer que estÃ¡ planeando la boda de su hermana y el padre de otra futura novia descubren que tienen doble reserva para su destino, por lo que ambas partes deciden compartir el lugar, pero el caos y el desastre les esperan.</description>
         <rating>6.0</rating>
         <cast>
             <person>
@@ -222,13 +222,13 @@
     </movie>
     <movie id="movie_8">
         <title>Gru 4. Mi villano favorito</title>
-        <genre>Animación, Familia, Comedia, Ciencia ficción</genre>
+        <genre>AnimaciÃ³n, Familia, Comedia, Ciencia ficciÃ³n</genre>
         <year>2024</year>
         <poster>https://image.tmdb.org/t/p/w500/wTpzSDfbUuHPEgqgt5vwVtPHhrb.jpg</poster>
         <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b51/LmOGumMsvztqerMlhWHZ.mp4</url>
         <backgroundImage>https://image.tmdb.org/t/p/w1280/lgkPzcOSnTvjeMnuFzozRO5HHw1.jpg</backgroundImage>
         <logo>https://image.tmdb.org/t/p/w500/lSbb8Ev1pN67nDYqzuApaVsS3pe.png</logo>
-        <description>Gru, Lucy y las niñas -Margo, Edith y Agnes- dan la bienvenida a un nuevo miembro en la familia: Gru Junior, que parece llegar con el propósito de ser un suplicio para su padre. Gru tendrá que enfrentarse en esta ocasión a su nueva némesis Maxime Le Mal y su sofisticada y malévola novia Valentina, lo que obligará a la familia a tener que darse a la fuga. Cuarta entrega de &apos;Gru, mi villano favorito&apos;.</description>
+        <description>Gru, Lucy y las niÃ±as -Margo, Edith y Agnes- dan la bienvenida a un nuevo miembro en la familia: Gru Junior, que parece llegar con el propÃ³sito de ser un suplicio para su padre. Gru tendrÃ¡ que enfrentarse en esta ocasiÃ³n a su nueva nÃ©mesis Maxime Le Mal y su sofisticada y malÃ©vola novia Valentina, lo que obligarÃ¡ a la familia a tener que darse a la fuga. Cuarta entrega de &apos;Gru, mi villano favorito&apos;.</description>
         <rating>7.1</rating>
         <cast>
             <person>
@@ -247,7 +247,7 @@
                 <role>Maxime (voice)</role>
             </person>
             <person>
-                <name>Sofía Vergara</name>
+                <name>SofÃ­a Vergara</name>
                 <image>https://image.tmdb.org/t/p/w200/l79eVtn6bSOaiq7R0UGu60foMrK.jpg</image>
                 <role>Valentina (voice)</role>
             </person>
@@ -265,13 +265,13 @@
     </movie>
     <movie id="movie_9">
         <title>Elevation</title>
-        <genre>Acción, Ciencia ficción, Suspense</genre>
+        <genre>AcciÃ³n, Ciencia ficciÃ³n, Suspense</genre>
         <year>2024</year>
         <poster>https://image.tmdb.org/t/p/w500/92cd9vR6ThBqT6Pe6m5daxX0rAk.jpg</poster>
         <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b52/sQghWETVlGEKxeaTnug.mp4</url>
         <backgroundImage>https://image.tmdb.org/t/p/w1280/au3o84ub27qTZiMiEc9UYzN74V3.jpg</backgroundImage>
         <logo>https://image.tmdb.org/t/p/w500/5ZcebxdEL5Q8gkgxGRRf22cVdBK.png</logo>
-        <description>Un padre soltero y dos mujeres se aventuran desde la seguridad de sus hogares a enfrentarse a criaturas monstruosas para salvar la vida de un niño.</description>
+        <description>Un padre soltero y dos mujeres se aventuran desde la seguridad de sus hogares a enfrentarse a criaturas monstruosas para salvar la vida de un niÃ±o.</description>
         <rating>6.4</rating>
         <cast>
             <person>
@@ -308,13 +308,13 @@
     </movie>
     <movie id="movie_10">
         <title>Deadpool y Lobezno</title>
-        <genre>Acción, Comedia, Ciencia ficción</genre>
+        <genre>AcciÃ³n, Comedia, Ciencia ficciÃ³n</genre>
         <year>2024</year>
         <poster>https://image.tmdb.org/t/p/w500/347cCxyMXy8WkcHfsfaPaugCyPA.jpg</poster>
         <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b52/RHEhOmEysqqPEWKwbrej.mp4</url>
         <backgroundImage>https://image.tmdb.org/t/p/w1280/by8z9Fe8y7p4jo2YlW2SZDnptyT.jpg</backgroundImage>
         <logo>https://image.tmdb.org/t/p/w500/9mAPpTbG0GinS9WaBFTW8llRqo7.png</logo>
-        <description>Un apático Wade Wilson se afana en la vida civil tras dejar atrás sus días como Deadpool, un mercenario moralmente flexible. Pero cuando su mundo natal se enfrenta a una amenaza existencial, Wade debe volver a vestirse a regañadientes con un Lobezno aún más reacio a ayudar.</description>
+        <description>Un apÃ¡tico Wade Wilson se afana en la vida civil tras dejar atrÃ¡s sus dÃ­as como Deadpool, un mercenario moralmente flexible. Pero cuando su mundo natal se enfrenta a una amenaza existencial, Wade debe volver a vestirse a regaÃ±adientes con un Lobezno aÃºn mÃ¡s reacio a ayudar.</description>
         <rating>7.6</rating>
         <cast>
             <person>
@@ -350,14 +350,14 @@
         </cast>
     </movie>
     <movie id="movie_12">
-        <title>Henry Danger: La pel�cula</title>
-        <genre>Acci�n, Comedia, Familia, Ciencia ficci�n</genre>
+        <title>Henry Danger: La película</title>
+        <genre>Acción, Comedia, Familia, Ciencia ficción</genre>
         <year>2025</year>
         <poster>https://image.tmdb.org/t/p/w500/dTHEq2PIRAIq4COayxraiGiaajX.jpg</poster>
         <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b52/TAYcXnhsQQzAJoRkExQ.mp4</url>
         <backgroundImage>https://image.tmdb.org/t/p/w1280/x8Kdi1OJbewkeGuijcSmUWrYyk2.jpg</backgroundImage>
         <logo>https://image.tmdb.org/t/p/w500/sBgU2kkJ8CZgajpWeAFIWvEMWn.png</logo>
-        <description>Henry Hart se convierte en un h�roe local en Dystopia despu�s de dejar atr�s Swellview. Cuando las trampas de la fama comienzan a pasar factura, se produce un giro con la presentaci�n de Missy, una superfan que pone su mundo patas arriba.</description>
+        <description>Henry Hart se convierte en un héroe local en Dystopia después de dejar atrás Swellview. Cuando las trampas de la fama comienzan a pasar factura, se produce un giro con la presentación de Missy, una superfan que pone su mundo patas arriba.</description>
         <rating>8.5</rating>
         <cast>
             <person>
@@ -394,7 +394,7 @@
     </movie>
     <serie id="serie_1">
         <title>En la victoria o en la derrota</title>
-        <genre>Animación, Comedia, Familia</genre>
+        <genre>AnimaciÃ³n, Comedia, Familia</genre>
         <seasons>1</seasons>
         <poster>https://image.tmdb.org/t/p/w500/sp54jkorVJHQ52WE5U7rbNjGnrC.jpg</poster>
         <backgroundImage>https://image.tmdb.org/t/p/w1280/tuToCybeasRLXrzQLre9eSutS5b.jpg</backgroundImage>
@@ -438,7 +438,7 @@
         <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b52/igPEkQbaiuPzNKXHqzaf.mp4</url>
     </episode>
     <episode id="episode_11">
-        <title>Árbitro</title>
+        <title>Ãrbitro</title>
         <season>1</season>
         <poster>https://image.tmdb.org/t/p/w500/zJOoJjh6ZBGbhjZTLsz9WqsQycH.jpg</poster>
         <url>https://pococdn.github.io/v/embed.html?vid=https://fileditchfiles.me/file.php?f=/b52/eCPZrauxlecDMuokHfD.mp4</url>
