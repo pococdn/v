@@ -1,17 +1,17 @@
-<b>Historial de versiones FLIXMOBI APK</b>
-<p>Version 1.0</p>
-<span>- Se agrego lista de favoritos.</span><br/>
-<span>- Se agrego lista de seguir viendo.</span><br/>
-<span>- Se agrego opción para editar el nombre de usuario en ajustes.</span><br/>
-<span>- Se agrego filtros y un buscador en el directorio</span>
-<br/><br/><br/>
-<p>Version 1.1</p>
-<span>- Se agrego opción para crear y subir copia de seguridad de las preferencias del usuario en ajustes.</span><br/>
-<span>- Se corrigio error en el apartado de información de peliculas y series.</span><br/>
-<span>- Se corrigio la organización de episodios.</span><br/>
-<span>- Se cambio la lógica de verificación de versión de la app.</span><br/>
-<span>- Se mejoró la lógica de activación de la app.</span><br/>
-<span>- Mejoras menores en la app.</span>
-<br/><br/><br/>
-<p>Version 1.2</p>
-<span>- Se corrigió errores comunes de la app.</span>
+<h1>Historial de versiones FLIXMOBI APK</h1>
+<h3>Version 1.0</h3>
+<p>- Se agrego lista de favoritos.</p>
+<p>- Se agrego lista de seguir viendo.</p>
+<p>- Se agrego opción para editar el nombre de usuario en ajustes.</p>
+<p>- Se agrego filtros y un buscador en el directorio</p>
+<br/>
+<h3>Version 1.1</h3>
+<p>- Se agrego opción para crear y subir copia de seguridad de las preferencias del usuario en ajustes.</p>
+<p>- Se corrigio error en el apartado de información de peliculas y series.</p>
+<p>- Se corrigio la organización de episodios.</p>
+<p>- Se cambio la lógica de verificación de versión de la app.</p>
+<p>- Se mejoró la lógica de activación de la app.</p>
+<p>- Mejoras menores en la app.</p>
+<br/>
+<h3>Version 1.2</h3>
+<p>- Se corrigió errores comunes de la app.</p>
