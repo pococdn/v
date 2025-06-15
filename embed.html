@@ -91,36 +91,6 @@
             return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
         }
 
-        async function getVideoSrc(url) {
-            const html = await tryProxies(url);
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            // Obtener el enlace del src del source del video
-            const videoSrc = doc.querySelector('source').src;
-            if (!videoSrc) throw new Error('No se pudo encontrar el enlace del video');
-            return videoSrc;
-        }
-
-        async function tryProxies(url) {
-            const PROXY_URLS = [
-                'https://api.allorigins.win/raw?url=',
-                'https://corsproxy.io/?',
-                'https://api.codetabs.com/v1/proxy?quest='
-            ];
-            for (const proxyUrl of PROXY_URLS) {
-                try {
-                    const response = await fetch(proxyUrl + encodeURIComponent(url), {
-                        headers: { 'User-Agent': 'Mozilla/5.0' },
-                        cache: 'no-store'
-                    });
-                    if (response.ok) return await response.text();
-                } catch (e) {
-                    console.log(`Proxy ${proxyUrl} falló:`, e);
-                }
-            }
-            throw new Error('Todos los proxies fallaron.');
-        }
-
         async function setupPlayer() {
             const videoPageUrl = getUrlParameter('vid');
             const embedUrl = getUrlParameter('url');
@@ -131,9 +101,8 @@
                 jwplayerContainer.style.display = 'block';
                 iframe.style.display = 'none';
                 try {
-                    const videoUrl = await getVideoSrc(videoPageUrl);
                     playerInstance = jwplayer(jwplayerContainer).setup({
-                        file: videoUrl,
+                        file: videoPageUrl,
                         type: 'mp4',
                         autostart: true,
                         controls: true,
